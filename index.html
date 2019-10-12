@@ -13,11 +13,21 @@
     <link href="https://fonts.googleapis.com/css?family=Slabo+27px&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/multicolore/stylesheet.css">
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     
     
     
     
 	<style>
+
+
+		.dropdown-toggle::after {
+			display: none;
+		}
+
+		.show {
+			background: rgba(0,0,0,0.4);
+		}
 
 
 		#animacionboton {
@@ -81,6 +91,7 @@
             margin-top: 30px;
            width: 80vw;
             height: 35vh;
+            margin-bottom: 280px;
         }
         
         
@@ -203,12 +214,12 @@
 
 		.lejos {
 			position: relative;
-			left: 2000px;
+			display:none;
 			transition: 0.4s;
 		}
 		.cerca {
 			position: relative;
-			left: 0px;
+			display:block;
 			transition: 0.4s;
 		}
 
@@ -218,12 +229,12 @@
 
 		.lejos2 {
 			position: relative;
-			left: 2000px;
+			display:none;
 			transition: 0.4s;
 		}
 		.cerca2 {
 			position: relative;
-			left: 0px;
+			display:block;
 			transition: 0.4s;
 		}
 
@@ -234,14 +245,36 @@
 
 		.lejos3 {
 			position: relative;
-			left: 2000px;
+			display:none;
 			transition: 0.4s;
 		}
 		.cerca3 {
 			position: relative;
-			left: 0px;
+			display:block;
 			transition: 0.4s;
 		}
+
+
+
+
+
+
+		.lejos4 {
+			position: relative;
+			display:none;
+			transition: 0.4s;
+		}
+		.cerca4 {
+			position: relative;
+			display:block;
+			transition: 0.4s;
+		}
+
+
+
+
+
+
 
 
 
@@ -352,7 +385,7 @@
   .navbar a:hover {
   	color: cyan;
   }
-#item1,#item2,#item3,#item4, #navbarDropdown {
+#item1,#item2,#item3,#item4,#item5, #navbarDropdown {
 	color: white;
     text-align: end;
 }
@@ -632,10 +665,10 @@ form input {
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
-        <a id="item1" class="nav-link" href="#separador1">Informacion <span class="sr-only">(current)</span> <span class="icon-book" style="margin-left: 5px"></span></a>
+        <a id="item1" class="nav-link" href="#separador1">Especialidades <span class="sr-only">(current)</span> <span class="icon-book" style="margin-left: 5px"></span></a>
       </li>
       <li class="nav-item">
-        <a id="item2" class="nav-link" href="#separador2">¿Quien somos? <span class="icon-pencil" style="margin-left: 5px"></span></a>
+        <a id="item2" class="nav-link" href="#historiacuadro">¿Quien somos? <span class="icon-pencil" style="margin-left: 5px"></span></a>
       </li>
       <li class="nav-item dropdown">
         <a  class="nav-link dropdown-toggle" href="#carouselExampleFade2" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -646,7 +679,7 @@ form input {
         <a class="nav-link" id="item4" href="#nocturnoseccion">Seccion Nocturna <span class="icon-moon" style="margin-left: 5px"></span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" id="item4" href="#Formulariocole">Contacto <span class="icon-phone" style="margin-left: 5px"></span></a>
+        <a class="nav-link" id="item5" href="#Formulariocole">Contacto <span class="icon-phone" style="margin-left: 5px"></span></a>
       </li>
     </ul>
   </div>
@@ -683,7 +716,14 @@ form input {
         </ol>
         
         <div class="carousel-inner">
-        <div class="carousel-item active">
+
+
+
+
+        <div class="carousel-item active" id="itemprimero">
+
+
+
         <div id="course" class="row justify-content-center mt-5">
 	<div class="col-md-8 text-center" style="color: white">
 		<h1 id="iniciopagina" style="font-family: 'Multicolore'; font-weight: bold;">Colegio Fortuna de Bagaces</h1>
@@ -699,7 +739,7 @@ form input {
          
          
          
-        <div class="carousel-item">
+        <div class="carousel-item" id="itemEspecialidades">
         
         
         <div style="" id="course" class="row justify-content-center">
@@ -715,7 +755,7 @@ form input {
 			</div>
 		</li>
 		<li>
-			<img class="img-fluid" src="imagenes/ayb2.jpg" title="" alt="">
+			<img class="img-fluid" src="imagenes/ayb191.jpeg" title="" alt="">
 			<div class="caption">
 				<h2 class="slider-title">Alimentos y Bebidas</h2>
 				<p>Lorem ipsum dolor</p>
@@ -757,7 +797,7 @@ form input {
         
         
         
-           <div class="carousel-item">
+           <div class="carousel-item" id="HistoriaItem">
            
            
            <div class="container-fluid" id="historiacuadro">
@@ -808,7 +848,7 @@ form input {
         
         
         
-         <div class="carousel-item">
+         <div class="carousel-item" id="itemMision">
         	
 	
 	
@@ -848,7 +888,7 @@ form input {
         
         
         
-         <div class="carousel-item">
+         <div class="carousel-item" id="itemBotones">
          
          <div class="container-fluid" id="animacionboton" >
 
@@ -902,7 +942,7 @@ form input {
 
 
 
-            <img id="agroindustriaimg" src="imagenes/hombreagro.png" class="img-fluid mt-5" alt="">
+            <img id="agroindustriaimg" src="imagenes/carnicero1.png" class="img-fluid mt-5" alt="">
 
 
 
@@ -924,14 +964,14 @@ Esta especialidad se encarga de transforma las materias primas en alimentos con 
 
 
             
-			<img id="secretariaimg" src="imagenes/secretaria.png" class="img-fluid" alt="">
+			<img id="secretariaimg" src="imagenes/secretaria2.png" class="img-fluid" alt="">
 
 
 
 
 
 
-            <p id="secretexto" style="text-align: center; color: white;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati tempore porro atque minus excepturi ut molestiae error, totam, saepe debitis eos! Soluta debitis beatae porro tempora consequatur tempore cumque, nobis!</p>
+            <p id="secretexto" style="text-align: center; color: white; margin-bottom: 280px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati tempore porro atque minus excepturi ut molestiae error, totam, saepe debitis eos! Soluta debitis beatae porro tempora consequatur tempore cumque, nobis!</p>
 
 
 
@@ -1003,7 +1043,7 @@ Esta especialidad se encarga de transforma las materias primas en alimentos con 
         <!--- SECCION NOCTURNA-->
         
            
-         <div class="carousel-item">
+         <div class="carousel-item" id="itemNocturna">
          
          
 
@@ -1036,7 +1076,7 @@ Esta especialidad se encarga de transforma las materias primas en alimentos con 
             <li style="color: white; font-weight: bold; font-size: 22px;">Hoteleria en Eventos Especiales</li style="color: white; font-weight: bold; font-size: 22px;">
             <div class="container mt-5" id="seccioncuadro">
                 <h4 style="color: black; font-weight: bold; ">Nota Importante</h4>
-                <p style="color: #CD7492; font-size: 22px; font-weight: bold;" class="text-center">La matricula se abrira a aprtir de 12 estudiantes</p>
+                <p style="color: #CD7492; font-size: 22px; font-weight: bold;" class="text-center">La matricula se abrira a partir de 12 estudiantes</p>
             </div>
 
 
@@ -1073,7 +1113,7 @@ Esta especialidad se encarga de transforma las materias primas en alimentos con 
            
            
            
-<div class="carousel-item">
+<div class="carousel-item" id="itemGaleria">
         	
         	
 
@@ -1141,7 +1181,7 @@ Esta especialidad se encarga de transforma las materias primas en alimentos con 
         <!--- FORMULARIO COLE -->
         
              
-         <div class="carousel-item">
+         <div class="carousel-item" id="itemFormulario">
          
          	
 
@@ -1417,37 +1457,24 @@ $(function() {
 	    
 	    <script>
 	    	 function colapsar() {
-        $('#inforacordion').addClass('ocultar');
+
+
         $('#informaticoimg').addClass('lejos');
         $('#logoinfo').addClass('lejos');
         $('#informaticatexto').addClass('lejos');
         $('#secretariaimg').addClass('lejos');
-        $('#agroindustriaimg').addClass('lejos2');
-         $('#logoagro').addClass('lejos2');
-          $('#agrotexto').addClass('lejos2');
-        $('#aybimg').addClass('lejos3');
-          $('#aybtexto').addClass('lejos3');
-            $('#logoayb').addClass('lejos3');
-        $('#turismoimg').addClass('lejos4');
-         document.getElementById("agroindustriaimg").style.display = "none";
-          document.getElementById("secretariaimg").style.display = "none";
-           document.getElementById("aybimg").style.display = "none";
-            document.getElementById("turismoimg").style.display = "none";
-             document.getElementById("informaticoimg").style.display = "none";
-             document.getElementById("informaticatexto").style.display = "none";
-             document.getElementById("logoinfo").style.display = "none";
-              document.getElementById("logoagro").style.display = "none";
-             document.getElementById("informaticatexto").style.display = "none";
-             document.getElementById("logoinfo").style.display = "none";
-               document.getElementById("logoayb").style.display = "none";
-             document.getElementById("aybtexto").style.display = "none";
+        $('#agroindustriaimg').addClass('lejos');
+         $('#logoagro').addClass('lejos');
+          $('#agrotexto').addClass('lejos');
+        $('#aybimg').addClass('lejos');
+          $('#aybtexto').addClass('lejos');
+            $('#logoayb').addClass('lejos');
+        $('#turismoimg').addClass('lejos');
+            $('#secretariaimg').addClass('lejos');
+            $('#secretexto').addClass('lejos');
+        $('#turismoimg').addClass('lejos');
+         $('#turismotexto').addClass('lejos');
 
-
-                 document.getElementById("secretexto").style.display = "none";
-
-                  document.getElementById("aybtexto").style.display = "none";
-
-                   document.getElementById("turismotexto").style.display = "none";
 
 
 
@@ -1457,20 +1484,7 @@ $(function() {
     window.onload = colapsar;
 	    </script>
 	    
-	    <script>
-    $('#botoninfo').click(mostrar);
-function mostrar() {
-    if ( $('#inforacordion').hasClass('ocultar') ) { 
-        $('#inforacordion').removeClass('ocultar');
-        $('#inforacordion').addClass('mostrar');
-        document.getElementById("infoimg").style.height = "280px";
-    } else {
-    	$('#inforacordion').removeClass('mostrar');
-        $('#inforacordion').addClass('ocultar');
-        document.getElementById("infoimg").style.height = "0px";
-    }
-}
-	    </script>
+	
 	    
 	    <script>
     $('#botoninfor1').click(informatico);
@@ -1482,106 +1496,348 @@ function informatico() {
         $('#informaticoimg').addClass('cerca');
         $('#informaticatexto').addClass('cerca');
          $('#logoinfo').addClass('cerca');
-        document.getElementById("informaticoimg").style.display = "block";
-        document.getElementById("informaticatexto").style.display = "block";
-         document.getElementById("logoinfo").style.display = "block";
-        document.getElementById("secretariaimg").style.display = "none";
-        document.getElementById("agroindustriaimg").style.display = "none";
-        document.getElementById("agroindustriaimg").style.display = "none";
-        document.getElementById("aybimg").style.display = "none";
-         document.getElementById("aybtexto").style.display = "none";
-         document.getElementById("logoayb").style.display = "none";
-         document.getElementById("agrotexto").style.display = "none";
+
+                 $('#agroindustriaimg').addClass('lejos');
+        $('#agrotexto').addClass('lejos');
+         $('#logoagro').addClass('lejos');
+         $('#agroindustriaimg').removeClass('cerca');
+        $('#agrotexto').removeClass('cerca');
+         $('#logoagro').removeClass('cerca');
+
+
+
+                 $('#aybimg').addClass('lejos');
+        $('#aybtexto').addClass('lejos');
+         $('#logoayb').addClass('lejos');
+         $('#aybimg').removeClass('cerca');
+        $('#aybtexto').removeClass('cerca');
+         $('#logoayb').removeClass('cerca');
+
+
+                 $('#turismoimg').addClass('lejos');
+        $('#turismotexto').addClass('lejos');
+         $('#log').addClass('lejos');
+         $('#turismoimg').removeClass('cerca');
+        $('#turismotexto').removeClass('cerca');
+         $('#log').removeClass('cerca');
+
+
+
+
+           $('#secretariaimg').addClass('lejos');
+        $('#secretexto').addClass('lejos');
+         $('#logs').addClass('lejos');
+         $('#secretariaimg').removeClass('cerca');
+        $('#secretexto').removeClass('cerca');
+         $('#logs').removeClass('cerca');
+
+
+
+
+
+
     } else {
+
     	$('#informaticoimg').removeClass('cerca');
     	$('#logoinfo').removeClass('cerca');
+    	  $('#informaticatexto').removeClass('cerca');
         $('#informaticoimg').addClass('lejos');
          $('#logoinfo').addClass('lejos');
-        $('#informaticatexto').removeClass('cerca');
              $('#informaticatexto').addClass('lejos');
     }
 }
 	    </script>
 	    
+
+
+   
 	    <script>
-    $('#botonagro1').click(agropersonaxd);
-function agropersonaxd() {
-	 if ( $('#agroindustriaimg').hasClass('lejos2') ) { 
-        $('#agroindustriaimg').removeClass('lejos2');
-        $('#agrotexto').removeClass('lejos2');
-         $('#logoagroimg').removeClass('lejos2');
-        $('#agroindustriaimg').addClass('cerca2');
-        $('#agrotexto').addClass('cerca2');
-        $('#logoagro').addClass('cerca2');
-         document.getElementById("agroindustriaimg").style.display = "block";
-          document.getElementById("agrotexto").style.display = "block";
-             document.getElementById("logoagro").style.display = "block";
-          document.getElementById("informaticoimg").style.display = "none";
-        document.getElementById("informaticatexto").style.display = "none";
-         document.getElementById("secretariaimg").style.display = "none";
-          document.getElementById("aybimg").style.display = "none";
-                 document.getElementById("turismoimg").style.display = "none";
-                  document.getElementById("logoinfo").style.display = "none";
-         document.getElementById("aybtexto").style.display = "none";
-         document.getElementById("logoayb").style.display = "none";
+    $('#botonagro1').click(agro1);
+function agro1() {
+    if ( $('#agroindustriaimg').hasClass('lejos') ) { 
+        $('#agroindustriaimg').removeClass('lejos');
+        $('#agrotexto').removeClass('lejos');
+         $('#logoagro').removeClass('lejos');
+        $('#agroindustriaimg').addClass('cerca');
+        $('#agrotexto').addClass('cerca');
+         $('#logoagro').addClass('cerca');
+
+                 $('#informaticoimg').addClass('lejos');
+        $('#informaticatexto').addClass('lejos');
+         $('#logoinfo').addClass('lejos');
+         $('#informaticoimg').removeClass('cerca');
+        $('#informaticatexto').removeClass('cerca');
+         $('#logoinfo').removeClass('cerca');
+
+
+
+                 $('#aybimg').addClass('lejos');
+        $('#aybtexto').addClass('lejos');
+         $('#logoayb').addClass('lejos');
+         $('#aybimg').removeClass('cerca');
+        $('#aybtexto').removeClass('cerca');
+         $('#logoayb').removeClass('cerca');
+
+
+                 $('#turismoimg').addClass('lejos');
+        $('#turismotexto').addClass('lejos');
+         $('#log').addClass('lejos');
+         $('#turismoimg').removeClass('cerca');
+        $('#turismotexto').removeClass('cerca');
+         $('#log').removeClass('cerca');
+
+
+
+
+           $('#secretariaimg').addClass('lejos');
+        $('#secretexto').addClass('lejos');
+         $('#logs').addClass('lejos');
+         $('#secretariaimg').removeClass('cerca');
+        $('#secretexto').removeClass('cerca');
+         $('#logs').removeClass('cerca');
+
+
+
+
+
+
     } else {
-    	$('#agroindustriaimg').removeClass('cerca2');
-    	$('#agrotexto').removeClass('cerca2');
-    	$('#logoagro').removeClass('cerca2');
-        $('#agroindustriaimg').addClass('lejos2');
-        $('#logoagroimg').addClass('lejos2');
-        $('#agrotexto').addClass('lejos2');
+
+    	$('#agroindustriaimg').removeClass('cerca');
+    	$('#logoagro').removeClass('cerca');
+    	  $('#agrotexto').removeClass('cerca');
+        $('#agroindustriaimg').addClass('lejos');
+         $('#logoagro').addClass('lejos');
+             $('#agrotexto').addClass('lejos');
     }
 }
 	    </script>
-      
-	      <script>
-    $('#botonayb1').click(aybxd);
-function aybxd() {
-	 if ( $('#aybimg').hasClass('lejos3') ) { 
-        $('#aybimg').removeClass('lejos3');
-         $('#logoayb').removeClass('lejos3');
-          $('#aybtexto').removeClass('lejos3');
-        $('#aybimg').addClass('cerca3');
-        $('#aybtexto').addClass('cerca3');
-        $('#logoayb').addClass('cerca3');
-         document.getElementById("aybimg").style.display = "block";
-         document.getElementById("aybtexto").style.display = "block";
-         document.getElementById("logoayb").style.display = "block";
-          document.getElementById("informaticoimg").style.display = "none";
-        document.getElementById("informaticatexto").style.display = "none";
-         document.getElementById("secretariaimg").style.display = "none";
-          document.getElementById("agroindustriaimg").style.display = "none";
-                 document.getElementById("turismoimg").style.display = "none";
-         document.getElementById("logoinfo").style.display = "none";
-         document.getElementById("agrotexto").style.display = "none";
-          document.getElementById("logoagro").style.display = "none";
+
+
+
+
+
+
+
+
+	        <script>
+    $('#botonayb1').click(ayb12);
+function ayb12() {
+    if ( $('#aybimg').hasClass('lejos') ) { 
+        $('#aybimg').removeClass('lejos');
+        $('#aybtexto').removeClass('lejos');
+         $('#logoayb').removeClass('lejos');
+        $('#aybimg').addClass('cerca');
+        $('#aybtexto').addClass('cerca');
+         $('#logoayb').addClass('cerca');
+
+                 $('#informaticoimg').addClass('lejos');
+        $('#informaticatexto').addClass('lejos');
+         $('#logoinfo').addClass('lejos');
+         $('#informaticoimg').removeClass('cerca');
+        $('#informaticatexto').removeClass('cerca');
+         $('#logoinfo').removeClass('cerca');
+
+
+
+                 $('#agroindustriaimg').addClass('lejos');
+        $('#agrotexto').addClass('lejos');
+         $('#logoagro').addClass('lejos');
+         $('#agroindustriaimg').removeClass('cerca');
+        $('#agrotexto').removeClass('cerca');
+         $('#logoagro').removeClass('cerca');
+
+
+                 $('#turismoimg').addClass('lejos');
+        $('#turismotexto').addClass('lejos');
+         $('#log').addClass('lejos');
+         $('#turismoimg').removeClass('cerca');
+        $('#turismotexto').removeClass('cerca');
+         $('#log').removeClass('cerca');
+
+
+
+
+           $('#secretariaimg').addClass('lejos');
+        $('#secretexto').addClass('lejos');
+         $('#logs').addClass('lejos');
+         $('#secretariaimg').removeClass('cerca');
+        $('#secretexto').removeClass('cerca');
+         $('#logs').removeClass('cerca');
+
+
+
+
+
+
     } else {
-    	$('#aybimg').removeClass('cerca3');
-    	$('#aybtexto').removeClass('cerca3');
-    	$('#logoayb').removeClass('cerca3');
-        $('#aybimg').addClass('lejos3');
-         $('#aybtexto').addClass('lejos3');
-          $('#logoayb').addClass('lejos3');
+
+    	$('#aybimg').removeClass('cerca');
+    	$('#logoayb').removeClass('cerca');
+    	  $('#aybtexto').removeClass('cerca');
+        $('#aybimg').addClass('lejos');
+         $('#logoayb').addClass('lejos');
+             $('#aybtexto').addClass('lejos');
     }
 }
 	    </script>
-      
-	      <script>
-    $('#').click(agropersonaxd);
-function agropersonaxd() {
-	 if ( $('#agroindustriaimg').hasClass('lejos2') ) { 
-        $('#agroindustriaimg').removeClass('lejos2');
-        $('#agroindustriaimg').addClass('cerca2');
-         document.getElementById("agroindustriaimg").style.display = "block";
-          document.getElementById("informaticoimg").style.display = "none";
-        document.getElementById("secretariaimg").style.display = "none";
+
+
+
+
+
+
+
+
+	    <script>
+    $('#botonturismo1').click(turismo12);
+function turismo12() {
+    if ( $('#turismoimg').hasClass('lejos') ) { 
+        $('#turismoimg').removeClass('lejos');
+        $('#turismotexto').removeClass('lejos');
+         $('#logo').removeClass('lejos');
+        $('#turismoimg').addClass('cerca');
+        $('#turismotexto').addClass('cerca');
+         $('#logo').addClass('cerca');
+
+                 $('#informaticoimg').addClass('lejos');
+        $('#informaticatexto').addClass('lejos');
+         $('#logoinfo').addClass('lejos');
+         $('#informaticoimg').removeClass('cerca');
+        $('#informaticatexto').removeClass('cerca');
+         $('#logoinfo').removeClass('cerca');
+
+
+
+                 $('#agroindustriaimg').addClass('lejos');
+        $('#agrotexto').addClass('lejos');
+         $('#logoagro').addClass('lejos');
+         $('#agroindustriaimg').removeClass('cerca');
+        $('#agrotexto').removeClass('cerca');
+         $('#logoagro').removeClass('cerca');
+
+
+                 $('#aybimg').addClass('lejos');
+        $('#aybtexto').addClass('lejos');
+         $('#logoayb').addClass('lejos');
+         $('#aybimg').removeClass('cerca');
+        $('#aybtexto').removeClass('cerca');
+         $('#logoayb').removeClass('cerca');
+
+
+
+
+           $('#secretariaimg').addClass('lejos');
+        $('#secretexto').addClass('lejos');
+         $('#logs').addClass('lejos');
+         $('#secretariaimg').removeClass('cerca');
+        $('#secretexto').removeClass('cerca');
+         $('#logs').removeClass('cerca');
+
+
+
+
+
+
     } else {
-    	$('#agroindustriaimg').removeClass('cerca2');
-        $('#agroindustriaimg').addClass('lejos2');
+
+    	$('#turismoimg').removeClass('cerca');
+    	$('#logo').removeClass('cerca');
+    	  $('#turismotexto').removeClass('cerca');
+        $('#turismoimg').addClass('lejos');
+         $('#logo').addClass('lejos');
+             $('#turismotexto').addClass('lejos');
     }
 }
 	    </script>
+
+
+
+
+	    <script>
+    $('#botonsecre1').click(secre12);
+function secre12() {
+    if ( $('#secretariaimg').hasClass('lejos') ) { 
+        $('#secretariaimg').removeClass('lejos');
+        $('#secretexto').removeClass('lejos');
+         $('#logo').removeClass('lejos');
+        $('#secretariaimg').addClass('cerca');
+        $('#secretexto').addClass('cerca');
+         $('#logo').addClass('cerca');
+
+                 $('#informaticoimg').addClass('lejos');
+        $('#informaticatexto').addClass('lejos');
+         $('#logoinfo').addClass('lejos');
+         $('#informaticoimg').removeClass('cerca');
+        $('#informaticatexto').removeClass('cerca');
+         $('#logoinfo').removeClass('cerca');
+
+
+
+                 $('#agroindustriaimg').addClass('lejos');
+        $('#agrotexto').addClass('lejos');
+         $('#logoagro').addClass('lejos');
+         $('#agroindustriaimg').removeClass('cerca');
+        $('#agrotexto').removeClass('cerca');
+         $('#logoagro').removeClass('cerca');
+
+
+                 $('#aybimg').addClass('lejos');
+        $('#aybtexto').addClass('lejos');
+         $('#logoayb').addClass('lejos');
+         $('#aybimg').removeClass('cerca');
+        $('#aybtexto').removeClass('cerca');
+         $('#logoayb').removeClass('cerca');
+
+
+
+
+           $('#turismoimg').addClass('lejos');
+        $('#turismotexto').addClass('lejos');
+         $('#logs').addClass('lejos');
+         $('#turismoimg').removeClass('cerca');
+        $('#turismotexto').removeClass('cerca');
+         $('#logs').removeClass('cerca');
+
+
+
+
+
+
+    } else {
+
+    	$('#secretariaimg').removeClass('cerca');
+    	$('#logo').removeClass('cerca');
+    	  $('#secretexto').removeClass('cerca');
+        $('#secretariaimg').addClass('lejos');
+         $('#logo').addClass('lejos');
+             $('#secretexto').addClass('lejos');
+    }
+}
+	    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	   
+
+
+
+
+
+
+
+
+
 	    
 	<script>
         var config = {
@@ -1614,6 +1870,316 @@ function agropersonaxd() {
         distance:'500px'
       });
 	</script>
-	
+
+
+
+
+
+
+
+
+	<script>
+$(document).ready(function(){
+  $("#s").hover(function(){
+    $(this).css("background-color", "yellow");
+    }, function(){
+    $(this).css("background-color", "pink");
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+<script>
+$(document).ready(function(){
+  $("#nombre").hover(function(){
+  	  $(document.getElementById("itemprimero")).addClass('active');
+  	 $(document.getElementById("itemFormulario")).removeClass('active');
+  	$(document.getElementById("itemNocturna")).removeClass('active');
+  	 $(document.getElementById("itemGaleria")).removeClass('active');
+    $(document.getElementById("HistoriaItem")).removeClass('active');
+      $(document.getElementById("itemMision")).removeClass('active');
+        $(document.getElementById("itemBotones")).removeClass('active');
+          $(document.getElementById("itemEspecialidades")).removeClass('active');
+    }, function(){
+    
+  });
+});
+</script>
+
+
+
+
+
+
+
+<script>
+$(document).ready(function(){
+  $("#item1").hover(function(){
+    $(document.getElementById("HistoriaItem")).addClass('active');
+    $(document.getElementById("itemprimero")).removeClass('active');
+     $(document.getElementById("itemFormulario")).removeClass('active');
+      $(document.getElementById("itemMision")).removeClass('active');
+       $(document.getElementById("itemGaleria")).removeClass('active');
+        $(document.getElementById("itemBotones")).removeClass('active');
+          $(document.getElementById("itemEspecialidades")).removeClass('active');
+    }, function(){
+    
+  });
+});
+</script>
+
+
+
+
+
+
+<script>
+$(document).ready(function(){
+  $("#item1").hover(function(){
+  	 $(document.getElementById("itemBotones")).addClass('active');
+    $(document.getElementById("HistoriaItem")).removeClass('active');
+    $(document.getElementById("itemprimero")).removeClass('active');
+     $(document.getElementById("itemFormulario")).removeClass('active');
+      $(document.getElementById("itemMision")).removeClass('active');
+       $(document.getElementById("itemGaleria")).removeClass('active');
+          $(document.getElementById("itemEspecialidades")).removeClass('active');
+    }, function(){
+    
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+<script>
+$(document).ready(function(){
+  $("#item2").hover(function(){
+    $(document.getElementById("HistoriaItem")).addClass('active');
+    $(document.getElementById("itemprimero")).removeClass('active');
+     $(document.getElementById("itemFormulario")).removeClass('active');
+      $(document.getElementById("itemMision")).removeClass('active');
+       $(document.getElementById("itemGaleria")).removeClass('active');
+        $(document.getElementById("itemBotones")).removeClass('active');
+          $(document.getElementById("itemEspecialidades")).removeClass('active');
+          $(document.getElementById("itemNocturna")).removeClass('active');
+    }, function(){
+    
+  });
+});
+</script>
+
+
+
+<script>
+$(document).ready(function(){
+  $("#navbarDropdown").hover(function(){
+  	 $(document.getElementById("itemGaleria")).addClass('active');
+    $(document.getElementById("HistoriaItem")).removeClass('active');
+    $(document.getElementById("itemprimero")).removeClass('active');
+     $(document.getElementById("itemFormulario")).removeClass('active');
+      $(document.getElementById("itemMision")).removeClass('active');
+        $(document.getElementById("itemBotones")).removeClass('active');
+          $(document.getElementById("itemEspecialidades")).removeClass('active');
+           $(document.getElementById("itemNocturna")).removeClass('active');
+    }, function(){
+    
+  });
+});
+</script>
+
+
+<script>
+$(document).ready(function(){
+  $("#item4").hover(function(){
+  	$(document.getElementById("itemNocturna")).addClass('active');
+  	 $(document.getElementById("itemGaleria")).removeClass('active');
+    $(document.getElementById("HistoriaItem")).removeClass('active');
+    $(document.getElementById("itemprimero")).removeClass('active');
+     $(document.getElementById("itemFormulario")).removeClass('active');
+      $(document.getElementById("itemMision")).removeClass('active');
+        $(document.getElementById("itemBotones")).removeClass('active');
+          $(document.getElementById("itemEspecialidades")).removeClass('active');
+    }, function(){
+    
+  });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+  $("#item5").hover(function(){
+  	 $(document.getElementById("itemFormulario")).addClass('active');
+  	$(document.getElementById("itemNocturna")).removeClass('active');
+  	 $(document.getElementById("itemGaleria")).removeClass('active');
+    $(document.getElementById("HistoriaItem")).removeClass('active');
+    $(document.getElementById("itemprimero")).removeClass('active');
+      $(document.getElementById("itemMision")).removeClass('active');
+        $(document.getElementById("itemBotones")).removeClass('active');
+          $(document.getElementById("itemEspecialidades")).removeClass('active');
+    }, function(){
+    
+  });
+});
+</script>
+
+
+
+
+<script>
+$(document).ready(function(){
+  $("#botoninfor1").hover(function(){
+  	 $(document.getElementById("informaticoimg")).addClass('cerca');
+  	   	 $(document.getElementById("informaticatexto")).addClass('cerca');
+  	   	   	 $(document.getElementById("logoinfo")).addClass('cerca');
+
+  	$(document.getElementById("agroindustriaimg")).removeClass('cerca');
+  	$(document.getElementById("agrotexto")).removeClass('cerca');
+    $(document.getElementById("logoagro")).removeClass('cerca');
+    $(document.getElementById("aybimg")).removeClass('cerca');
+    $(document.getElementById("aybtexto")).removeClass('cerca');
+    $(document.getElementById("logoayb")).removeClass('cerca');
+    $(document.getElementById("turismoimg")).removeClass('cerca');
+    $(document.getElementById("turismotexto")).removeClass('cerca');
+    $(document.getElementById("logo21")).removeClass('cerca');
+    $(document.getElementById("secretariaimg")).removeClass('cerca');
+    $(document.getElementById("secretexto")).removeClass('cerca');
+    $(document.getElementById("logosecre")).removeClass('cerca');
+
+
+    }, function(){
+    
+  });
+});
+</script>
+
+
+
+
+<script>
+$(document).ready(function(){
+  $("#botonagro1").hover(function(){
+  	 $(document.getElementById("agroindustriaimg")).addClass('cerca');
+  	   	 $(document.getElementById("agrotexto")).addClass('cerca');
+  	   	   	 $(document.getElementById("logoagro")).addClass('cerca');
+
+  	$(document.getElementById("informaticoimg")).removeClass('cerca');
+  	$(document.getElementById("informaticatexto")).removeClass('cerca');
+    $(document.getElementById("logoinfo")).removeClass('cerca');
+    $(document.getElementById("aybimg")).removeClass('cerca');
+    $(document.getElementById("aybtexto")).removeClass('cerca');
+    $(document.getElementById("logoayb")).removeClass('cerca');
+    $(document.getElementById("turismoimg")).removeClass('cerca');
+    $(document.getElementById("turismotexto")).removeClass('cerca');
+    $(document.getElementById("logo21")).removeClass('cerca');
+    $(document.getElementById("secretariaimg")).removeClass('cerca');
+    $(document.getElementById("secretexto")).removeClass('cerca');
+    $(document.getElementById("logosecre")).removeClass('cerca');
+
+
+    }, function(){
+    
+  });
+});
+</script>
+
+
+
+<script>
+$(document).ready(function(){
+  $("#botonayb1").hover(function(){
+  	 $(document.getElementById("aybimg")).addClass('cerca');
+  	   	 $(document.getElementById("aybtexto")).addClass('cerca');
+  	   	   	 $(document.getElementById("logoayb")).addClass('cerca');
+
+  	$(document.getElementById("informaticoimg")).removeClass('cerca');
+  	$(document.getElementById("informaticatexto")).removeClass('cerca');
+    $(document.getElementById("logoinfo")).removeClass('cerca');
+    $(document.getElementById("agroindustriaimg")).removeClass('cerca');
+    $(document.getElementById("agrotexto")).removeClass('cerca');
+    $(document.getElementById("logoagro")).removeClass('cerca');
+    $(document.getElementById("turismoimg")).removeClass('cerca');
+    $(document.getElementById("turismotexto")).removeClass('cerca');
+    $(document.getElementById("logo21")).removeClass('cerca');
+    $(document.getElementById("secretariaimg")).removeClass('cerca');
+    $(document.getElementById("secretexto")).removeClass('cerca');
+    $(document.getElementById("logosecre")).removeClass('cerca');
+
+
+    }, function(){
+    
+  });
+});
+</script>
+
+
+
+<script>
+$(document).ready(function(){
+  $("#botonturismo1").hover(function(){
+  	 $(document.getElementById("turismoimg")).addClass('cerca');
+  	   	 $(document.getElementById("turismotexto")).addClass('cerca');
+  	   	   	 $(document.getElementById("logoturismo")).addClass('cerca');
+
+  	$(document.getElementById("informaticoimg")).removeClass('cerca');
+  	$(document.getElementById("informaticatexto")).removeClass('cerca');
+    $(document.getElementById("logoinfo")).removeClass('cerca');
+    $(document.getElementById("agroindustriaimg")).removeClass('cerca');
+    $(document.getElementById("agrotexto")).removeClass('cerca');
+    $(document.getElementById("logoagro")).removeClass('cerca');
+    $(document.getElementById("aybimg")).removeClass('cerca');
+    $(document.getElementById("aybtexto")).removeClass('cerca');
+    $(document.getElementById("logoayb")).removeClass('cerca');
+    $(document.getElementById("secretariaimg")).removeClass('cerca');
+    $(document.getElementById("secretexto")).removeClass('cerca');
+    $(document.getElementById("logosecre")).removeClass('cerca');
+
+
+    }, function(){
+    
+  });
+});
+</script>
+
+
+
+<script>
+$(document).ready(function(){
+  $("#botonsecre1").hover(function(){
+  	 $(document.getElementById("secretariaimg")).addClass('cerca');
+  	   	 $(document.getElementById("secretexto")).addClass('cerca');
+  	   	   	 $(document.getElementById("logosecre")).addClass('cerca');
+
+  	$(document.getElementById("informaticoimg")).removeClass('cerca');
+  	$(document.getElementById("informaticatexto")).removeClass('cerca');
+    $(document.getElementById("logoinfo")).removeClass('cerca');
+    $(document.getElementById("agroindustriaimg")).removeClass('cerca');
+    $(document.getElementById("agrotexto")).removeClass('cerca');
+    $(document.getElementById("logoagro")).removeClass('cerca');
+    $(document.getElementById("aybimg")).removeClass('cerca');
+    $(document.getElementById("aybtexto")).removeClass('cerca');
+    $(document.getElementById("logoayb")).removeClass('cerca');
+    $(document.getElementById("turismoimg")).removeClass('cerca');
+    $(document.getElementById("turismotexto")).removeClass('cerca');
+    $(document.getElementById("logoturismo")).removeClass('cerca');
+
+
+    }, function(){
+    
+  });
+});
+</script>
+
+
 </body>
 </html>
