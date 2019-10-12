@@ -18,7 +18,18 @@
     
     
 	<style>
-        
+
+
+		#animacionboton {
+			height: 100vh;
+			overflow: auto;
+		}
+
+		#botonesespecialidades img {
+			margin: 0 auto;
+			
+		}
+
         
         #menuboton {
             color: white;
@@ -31,6 +42,8 @@
         
         #colegioinfo {
             color: white;
+            height: 100vh;
+            overflow: auto;
         }
         
         
@@ -175,9 +188,19 @@
             padding: 5px;
             border: 1px solid #333;
         }
+
+
+
+
+
+
+
+
 		#informaticatexto {
 			margin-top: 10px;
 		}
+
+
 		.lejos {
 			position: relative;
 			left: 2000px;
@@ -188,6 +211,11 @@
 			left: 0px;
 			transition: 0.4s;
 		}
+
+
+
+
+
 		.lejos2 {
 			position: relative;
 			left: 2000px;
@@ -198,6 +226,12 @@
 			left: 0px;
 			transition: 0.4s;
 		}
+
+
+
+
+
+
 		.lejos3 {
 			position: relative;
 			left: 2000px;
@@ -208,6 +242,11 @@
 			left: 0px;
 			transition: 0.4s;
 		}
+
+
+
+
+
 		#botoninfor1:hover, #botonagro1:hover, #botonturismo1:hover, #botonsecre1:hover, #botonayb1:hover  {
 			background: red;
 		}
@@ -282,7 +321,7 @@
 
 #infocarrusel {
 	height: 100vh;
-	overflow: auto;
+
 }
     
         
@@ -294,9 +333,11 @@
 	margin-bottom: -40px;
 }
 .carousel-control-next {
+	position: fixed;
 	right: 0;
 }
 .carousel-control-prev {
+	position: fixed;
 	left: 0;
 }
 .navbar {
@@ -633,6 +674,12 @@ form input {
         <ol id="indicadores1" class="carousel-indicators">
         <li data-target="#infocarrusel" data-slide-to="0" class="active"></li>
         <li data-target="#infocarrusel" data-slide-to="1"></li>
+        <li data-target="#infocarrusel" data-slide-to="2"></li>
+        <li data-target="#infocarrusel" data-slide-to="3"></li>
+        <li data-target="#infocarrusel" data-slide-to="4"></li>
+        <li data-target="#infocarrusel" data-slide-to="5"></li>
+        <li data-target="#infocarrusel" data-slide-to="6"></li>
+        <li data-target="#infocarrusel" data-slide-to="7"></li>
         </ol>
         
         <div class="carousel-inner">
@@ -657,7 +704,7 @@ form input {
         
         <div style="" id="course" class="row justify-content-center">
 	<div class="col-md-8 text-center" style="color: white">
-		<h1>Escoje entre todas nuestras especialidades</h1>
+		<h1 class="mb-5">Escoje entre todas nuestras especialidades</h1>
 		<section id="slider" class="">
 		<ul class="slider-wrapper">
 		<li class="current-slide">
@@ -718,7 +765,7 @@ form input {
                
            <div class="container-fluid" id="historia">
 	<h1 style="color: white; font-size: 43px; font-family: 'Multicolore';" class="text-center mb-5">Historia del colegio</h1>
-        <p style="color: white; font-size: 23px;" class="text-center"> En el año 1970 os habitantes de la Fortuna de Bagaces, vieron la necesidad de tener un colegio propio en la zona.</p>
+        <p style="color: white; font-size: 23px;" class="text-center"> En el año 1970 los habitantes de la Fortuna de Bagaces, vieron la necesidad de tener un colegio propio en la zona.</p>
         <h3 style="color: white" class="text-center mt-5">En sus gestiones iniciales sobresalen los nombres de:</h3>
         <div class="row">
             <div class="col-6 text-center mt-5" style="color: white;">
@@ -737,7 +784,7 @@ form input {
         </div>
         </div>
         <div class="container">
-            <p class="text-center" style="color: white; font-size: 23px;">En 1973 el colegio abre sus puertas a los jovene, el cual era llamado en ese entonces Instituto de Capacitacion Tecnica Agropecuaria de Fortuna <br> En el año de 1975 fue la inauguracion oficial del edificio del colegio. <br>En sus primeros pasos como institucion estaba conformado por una comunidad de tan solo ciento veinte estudiantes</p>
+            <p class="text-center" style="color: white; font-size: 23px;">En 1973 el colegio abre sus puertas a los jovenes, el cual era llamado en ese entonces Instituto de Capacitacion Tecnica Agropecuaria de Fortuna <br> En el año de 1975 fue la inauguracion oficial del edificio del colegio. <br>En sus primeros pasos como institucion estaba conformado por una comunidad de tan solo ciento veinte estudiantes</p>
         </div>
 	</div>
                
@@ -769,22 +816,22 @@ form input {
 	
 		
 			<h1 class="text-center" style="font-family: 'Multicolore';">Mision</h1>
-			<p  style="font-family: 'Bell MT';" class="text-center">Brindar una educacion integral y de excelencia</p>
+			<p  style="font-size: 22px;" class="text-center">Brindar una educacion integral y de excelencia</p>
 	
 	
 			<h1 class="text-center" style="font-family: 'Multicolore';">Valores</h1>
-			<li class="text-center">Perseverancia</li>
-			<li class="text-center">Honestidad</li>
-			<li class="text-center">Espiritualidad</li>
-			<li class="text-center">Disciplina</li>
-			<li class="text-center">Tolerancia</li>
-			<li class="text-center">Respeto</li>
-			<li class="text-center">Responsabilidad</li>
-			<li class="text-center">Solidaridad</li>
+			<li style="font-size: 22px;" class="text-center">Perseverancia</li>
+			<li style="font-size: 22px;" class="text-center">Honestidad</li>
+			<li style="font-size: 22px;" class="text-center">Espiritualidad</li>
+			<li style="font-size: 22px;" class="text-center">Disciplina</li>
+			<li style="font-size: 22px;" class="text-center">Tolerancia</li>
+			<li style="font-size: 22px;" class="text-center">Respeto</li>
+			<li style="font-size: 22px;" class="text-center">Responsabilidad</li>
+			<li style="font-size: 22px;" class="text-center">Solidaridad</li>
 	
 
 			<h1 class="text-center mt-5" style="font-family: 'Multicolore';">Vision</h1>
-			<p  class="text-center" style="font-weight: ; font-family: 'Slabo 27px', serif;">Promover al C.T.P Fortuna como una institucion lider en la excelencia tecnica y academica en la vivencia de valores</p>
+			<p  class="text-center" style="font-size: 22px; margin-bottom: 180px;">Promover al C.T.P Fortuna como una institucion lider en la excelencia tecnica y academica en la vivencia de valores</p>
 		
 
 
@@ -807,27 +854,136 @@ form input {
 
 
 			<div id="botonesespecialidades">
+
 				<button id="botoninfor1" type="button" class="btn btn-primary" style="color: white;">Informatica en Redes <span class="icon-laptop"></span></button>
+
+
 			<button id="botonagro1" type="button" class="btn btn-primary" style="color: white;">AgroIndustria</button>
+
+
 			<button id="botonayb1" type="button" class="btn btn-primary" style="color: white;">Alimentos y Bebidas</button>
+
+
 			<button id="botonturismo1" type="button" class="btn btn-primary" style="color: white;">Turismo</button>
+
+
 			<button id="botonsecre1" type="button" class="btn btn-primary" style="color: white;">Secretariado</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
 			<div class="text-center">
-				<img style="margin: 0 auto;" id="logoinfo" src="imagenes/logoinfo.png" class="img-fluid text-center" alt="">
-			<p id="informaticatexto" style="color: white;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores officia corporis quod facere tenetur ex magnam porro, a sequi! Autem neque suscipit magni nobis, delectus totam libero officia inventore ullam.</p>
-			<img style="margin: 0 auto;" id="logoagro" src="imagenes/logoagroIndustria.png" class="img-fluid" alt="">
-			<p id="agrotexto" style="color: white;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores officia corporis quod facere tenetur ex magnam porro, a sequi! Autem neque suscipit magni nobis, delectus totam libero officia inventore ullam.</p>
-			<img style="margin: 0 auto;" id="logoayb" src="imagenes/ricas.jpg" class="img-fluid" alt="">
-			<p id="aybtexto" style="color: white;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores officia corporis quod facere tenetur ex magnam porro, a sequi! Autem neque suscipit magni nobis, delectus totam libero officia inventore ullam.</p>
+
+				<img id="informaticoimg" src="imagenes/informatico.png" class="img-fluid mb-5" style="display: " alt="">
+
+
+				<img style="margin: 0 auto;" id="logoinfo" src="imagenes/logoinfo.png" class="text-center mb-5" height="90vh" alt="">
+
+
+			<p id="informaticatexto" style="text-align: center; color: white; font-size: 22px;">Esta especialidad prepara técnicos medios que contribuyan con el desarrollo económico y tecnológico, en el diseño y representación en redes de computadoras acordes tanto con las especificaciones del cliente, como con las características del entorno.</p>
+
+			
+
+
+
+
+
+
+
+
+
+
+            <img id="agroindustriaimg" src="imagenes/hombreagro.png" class="img-fluid mt-5" alt="">
+
+
+
+			<img style="margin: 0 auto; margin-top: 50px;" id="logoagro" src="imagenes/logoagroIndustria.png" class="mb-5" height="80vh" alt="">
+
+
+			<p id="agrotexto" style="text-align: center; color: white; margin-bottom: 180px; font-size: 22px;">Es una actividad productiva económica que comprende el procesamiento, desarrollo, industrialización y comercialización de productos de origen alimentario.
+Esta especialidad se encarga de transforma las materias primas en alimentos con distintos formatos y propiedades.
+</p>
+
+
+
+
+
+
+
+
+
+
+
+            
+			<img id="secretariaimg" src="imagenes/secretaria.png" class="img-fluid" alt="">
+
+
+
+
+
+
+            <p id="secretexto" style="text-align: center; color: white;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati tempore porro atque minus excepturi ut molestiae error, totam, saepe debitis eos! Soluta debitis beatae porro tempora consequatur tempore cumque, nobis!</p>
+
+
+
+
+
+             <img id="aybimg" src="imagenes/cocinero2.png" class="text-center img-fluid mt-5"  alt="">
+
+
+             <img style="margin: 0 auto;" id="logoayb" src="" class="mt-5" height="80vh" alt="aqui va el logo de ayb XD" style="color: white">
+
+
+
+              <p class="mt-5" id="aybtexto" style="color: white; text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores officia corporis quod facere tenetur ex magnam porro, a sequi! Autem neque suscipit magni nobis, delectus totam libero officia inventore ullam.</p>
+
+
+
+
+
+
+
+
+               <img id="turismoimg" src="imagenes/turismo2.png" class="img-fluid" alt="">
+
+
+
+               <p id="turismotexto" style="text-align: center; color: white;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus nesciunt dolores explicabo totam, nisi perspiciatis natus asperiores quia distinctio commodi aperiam sequi aliquid atque, at earum eum ex repellat perferendis modi iste. Itaque, nobis.</p>
+
+
+
+
+
+
+
+
+
+
+			
+
+
+			
+
+
 		</div>
 		</div>
 
  
-			<img id="informaticoimg" src="imagenes/informatico.png" class="img-fluid" style="display: " alt="">
-			<img id="agroindustriaimg" src="imagenes/hombreagro.png" class="img-fluid" alt="">
-			<img id="secretariaimg" src="imagenes/secretaria.png" class="img-fluid" alt="">
-			<img id="aybimg" src="imagenes/aybpersona.png" class="text-center" height="500" alt="">
-			<img id="turismoimg" src="imagenes/turismo2.png" class="img-fluid" alt="">
+			
+
+			
+
+			
+			
 
 
 </div>
@@ -874,10 +1030,10 @@ form input {
             
             <a href="" style="font-size: 22px;" id="correocole">ctpfortunanocturno2019@gmail.com</a>
             <h4 class="mt-5">OFERTA DE ESPECIALIDADES</h4>
-            <h4>Contabilidad</h4>
-            <h4>Informatica en Redes</h4>
-            <h4>Ejecutivo en Centros de Servicio</h4>
-            <h4>Hoteleria en Eventos Especiales</h4>
+            <li style="color: white; font-weight: bold; font-size: 22px;">Contabilidad</li style="color: white; font-weight: bold; font-size: 22px;">
+            <li style="color: white; font-weight: bold; font-size: 22px;">Informatica en Redes</li style="color: white; font-weight: bold; font-size: 22px;">
+            <li style="color: white; font-weight: bold; font-size: 22px;">Ejecutivo en Centros de Servicio</li style="color: white; font-weight: bold; font-size: 22px;">
+            <li style="color: white; font-weight: bold; font-size: 22px;">Hoteleria en Eventos Especiales</li style="color: white; font-weight: bold; font-size: 22px;">
             <div class="container mt-5" id="seccioncuadro">
                 <h4 style="color: black; font-weight: bold; ">Nota Importante</h4>
                 <p style="color: #CD7492; font-size: 22px; font-weight: bold;" class="text-center">La matricula se abrira a aprtir de 12 estudiantes</p>
@@ -891,12 +1047,12 @@ form input {
             <h3>Requisitos</h3>
             
             <li style="font-size: 22px; font-weight: bold;" class="text-center mt-5"><span></span>Ser mayor de 18 años.</li>
-            <li style="font-size: 22px; font-weight: bold;" class="text-center mt-3">Conlusion de la educacion general basica </li>
+            <li style="font-size: 22px; font-weight: bold;" class="text-center mt-3">Conclusion de la educacion general basica </li>
             <li style="font-size: 22px; font-weight: bold;" class="text-center mt-3">Demostrar que se encuentra matriculado y cursando la educacion diversificada bajo alguna ofertas de la educacion abierta o el bachillerato por madurez</li>
             <li style="font-size: 22px; font-weight: bold;" class="text-center mt-3">Conclusion de la eduacion diversificada Y/0 su bachillerato</li>
             <br>
             
-            <h2 class="text-center mb-5">Consultas Llamar al telefono <br> 2673-0027</h2>
+            <h2 style="margin-bottom: 180px;" class="text-center">Consultas Llamar al telefono <br> 2673-0027</h2>
             
             
         </div>
@@ -992,7 +1148,7 @@ form input {
 <div class="container-fluid" id="Formulariocole">
 
 	      
-		    <h1 style="color: white;">Formulario <br> de <br> informacion</h1>
+		    <h1 style="color: white;">Formulario <br> de <br> Informacion</h1>
 
 		   
 		    <div class="container-fluid text-center" style="color: white">
@@ -1000,7 +1156,7 @@ form input {
 
        
        	
-       			<h3>Correo: <a href="ctpfortuna@gmail.com">ctpfortuna@gmail.com</a></h3>
+       			<h3 class="mt-5">Correo: <a href="ctpfortuna@gmail.com">ctpfortuna@gmail.com</a></h3>
            <h3>Numero telefonico: <a href="+506 0000-0000">+506 0000-0000</a></h3>
            <h3>Numero de oficina: <a href="+506 0000-0000">+506 0000-0000</a></h3>
            
@@ -1285,6 +1441,18 @@ $(function() {
              document.getElementById("logoinfo").style.display = "none";
                document.getElementById("logoayb").style.display = "none";
              document.getElementById("aybtexto").style.display = "none";
+
+
+                 document.getElementById("secretexto").style.display = "none";
+
+                  document.getElementById("aybtexto").style.display = "none";
+
+                   document.getElementById("turismotexto").style.display = "none";
+
+
+
+
+                              
       }
     window.onload = colapsar;
 	    </script>
